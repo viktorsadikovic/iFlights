@@ -1,0 +1,106 @@
+<style>
+    .form-control {
+        font-size: 15px;
+    }
+</style>
+<th:block xmlns:th="http://www.thymeleaf.org">
+    <section class="home" style="padding-top: 7%">
+        <div class="container"
+             style="width: 40%; margin: auto; background: white; font-size: 21px; padding: 70px; border-radius: 21px; box-shadow: 5px 10px 8px #888888">
+            <form action="/flight/saveFlight" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="airportDeparture">Departure</label>
+                        <select name="airportDeparture" class="form-control" id="airportDeparture">
+                            <option th:each="departureAirport : ${airports}"
+                                    th:value="${departureAirport.getId_airport()}"
+                                    th:text="${departureAirport.getName()}">
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="airportArrival">Arrival</label>
+                        <select name="airportArrival" class="form-control" id="airportArrival">
+                            <option th:each="arrivalAirport : ${airports}"
+                                    th:value="${arrivalAirport.getId_airport()}"
+                                    th:text="${arrivalAirport.getName()}">
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="timeDeparture">Departure time</label>
+                        <input type="datetime-local" name="timeDeparture" class="form-control" id="timeDeparture">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="timeArrival">Arrival time</label>
+                        <input type="datetime-local" name="timeArrival" class="form-control" id="timeArrival">
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <label for="airlinesCompany">Airlines company</label>
+                    <select name="airlinesCompany" class="form-control" id="airlinesCompany">
+                        <option th:each="company : ${companies}"
+                                th:value="${company.getId_company()}"
+                                th:text="${company.getName()}">
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="flightNumber">Flight number</label>
+                    <input type="text" class="form-control" id="flightNumber" name="flightNumber" placeholder="Flight number">
+                </div>
+                <div class="form-group">
+                    <label for="gate">Gate</label>
+                    <input type="text" class="form-control" id="gate" name="gate" placeholder="Gate">
+                </div>
+
+                <div class="form-row">
+                    <label for="price">Price</label>
+                    <input type="text" class="form-control" name="price" id="price" placeholder="Price in USD">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 15px; margin-top: 15px;">Submit</button>
+            </form>
+        </div>
+    </section>
+    <div class="row customers">
+        <div class="column">
+            <a href="https://www.lufthansa.com/de/de/homepage">
+                <img src="lufthansaGIF.gif" title="Lufthansa" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" style="filter: grayscale(0)">
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://wizzair.com/mk-mk">
+                <img style="padding-top: 24%;filter: grayscale(0)" src="wizzGIF.gif" title="Wizz Air" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" >
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.turkishairlines.com/">
+                <img style="padding-top: 10%;filter: grayscale(0)" src="turkishGIF.gif" title="Turkish Airlines" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" >
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.emirates.com/us/english/">
+                <img style="padding-top: 10%;filter: grayscale(0)" src="emirates.png" title="Fly Emirates" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" >
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.airserbia.com/">
+                <img style="padding-top: 10%;filter: grayscale(0)" src="airserbiaGIF.gif" title="Air Serbia" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive">
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.qantas.com/au/en.html">
+                <img src="qantasGIF.gif" title="Qantas" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" style="filter: grayscale(0)">
+            </a>
+        </div>
+    </div>
+
+
+</th:block>
+

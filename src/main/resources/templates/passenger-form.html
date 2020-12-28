@@ -1,0 +1,86 @@
+<style>
+    .form-control {
+        font-size: 15px;
+    }
+
+</style>
+<th:block>
+    <section class="home" style="padding-top: 10%">
+        <div class="container"
+             style="width: 40%; margin: auto; background: white; font-size: 21px; padding: 70px; border-radius: 21px; box-shadow: 5px 10px 8px #888888">
+            <form action="/passenger/savePassenger" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="firstName">First name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName"
+                               placeholder="First name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lastName">Last name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Address">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="passportNumber">Passport number</label>
+                        <input type="text" class="form-control" name="passportNumber" id="passportNumber" placeholder="Passport number">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="phoneNumber">Phone number</label>
+                        <input id="phoneNumber" class="form-control" name="phoneNumber" type="text" placeholder="Phone number">
+
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="accountNumber">Account number</label>
+                    <input type="text" class="form-control" name="accountNumber" id="accountNumber" placeholder="Account number">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 15px; margin-top: 15px;">Next</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="row customers">
+        <div class="column">
+            <a href="https://www.lufthansa.com/de/de/homepage">
+                <img src="https://media2.giphy.com/media/MCFZ7HyIxvmQ1lXsGp/giphy.gif" title="Lufthansa" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" style="filter: grayscale(0)">
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://wizzair.com/mk-mk">
+                <img style="padding-top: 24%;filter: grayscale(0)" src="https://media4.giphy.com/media/lqwVWKxHepa3VK6GOi/source.gif" title="Wizz Air" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" >
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.turkishairlines.com/">
+                <img style="padding-top: 10%;filter: grayscale(0)" src="https://media2.giphy.com/media/kimULkDeo1CKqQeUou/giphy.gif" title="Turkish Airlines" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" >
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.emirates.com/us/english/">
+                <img style="padding-top: 10%;filter: grayscale(0)" src="https://seeklogo.net/wp-content/uploads/2014/10/emirates-airlines-logo-01.png" title="Fly Emirates" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" >
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.airserbia.com/">
+                <img style="padding-top: 10%;filter: grayscale(0)" src="https://media1.giphy.com/media/j0Oj8NybxiHvT6pO4L/source.gif" title="Air Serbia" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive">
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.qantas.com/au/en.html">
+                <img src="https://media3.giphy.com/media/kGXPqWMAVr65CHuImS/source.gif" title="Qantas" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" style="filter: grayscale(0)">
+            </a>
+        </div>
+    </div>
+
+
+</th:block>

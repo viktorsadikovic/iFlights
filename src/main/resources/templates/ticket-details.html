@@ -1,0 +1,224 @@
+<style>
+    .form-control {
+        font-size: 15px;
+    }
+
+</style>
+<th:block xmlns:th="http://www.thymeleaf.org">
+    <section class="home" style="padding-top: 10%">
+        <div class="container"
+             style="width: 40%; margin: auto; background: white; font-size: 21px; padding: 70px; border-radius: 21px; box-shadow: 5px 10px 8px #888888">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstName">First name</label>
+                    <input type="text"
+                           class="form-control"
+                           id="firstName"
+                           name="firstName"
+                           placeholder="First name"
+                           disabled
+                           th:value="(${passenger} != null ? ${passenger.getFirst_name()} : '')">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastName">Last name</label>
+                    <input type="text"
+                           class="form-control"
+                           id="lastName"
+                           name="lastName"
+                           placeholder="Last name"
+                           disabled
+                           th:value="(${passenger} != null ? ${passenger.getLast_name()} : '')">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="passportNumber">Passport Number</label>
+                    <input type="text"
+                           class="form-control"
+                           id="passportNumber"
+                           name="passportNumber"
+                           placeholder="First name"
+                           disabled
+                           th:value="(${passenger} != null ? ${passenger.getPassport_number()} : '')">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="address">Address</label>
+                    <input type="text"
+                           class="form-control"
+                           id="address"
+                           name="address"
+                           placeholder="Address"
+                           disabled
+                           th:value="(${passenger} != null ? ${passenger.getAddress()} : '')">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email"
+                           class="form-control"
+                           id="email"
+                           name="email"
+                           placeholder="Email"
+                           disabled
+                           th:value="(${passenger} != null ? ${passenger.getEmail()} : '')">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="phoneNumber">Phone number</label>
+                    <input type="text"
+                           class="form-control"
+                           id="phoneNumber"
+                           name="phoneNumber"
+                           placeholder="phoneNumber"
+                           disabled
+                           th:value="(${passenger} != null ? ${passenger.getPhone_number()} : '')">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="departure">Departure</label>
+                    <input type="text"
+                           class="form-control"
+                           name="departure"
+                           id="departure"
+                           disabled
+                           th:value="(${flight} != null ? ${flight.getAirportDeparture().getName()} : '')">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="timeDeparture">Time of departure</label>
+                    <input id="timeDeparture"
+                           class="form-control"
+                           name="timeDeparture" type="text"
+                           disabled
+                           th:value="(${flight} != null ? ${flight.getTime_departure} : '')">
+
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="arrival">Arrival</label>
+                    <input type="text"
+                           class="form-control"
+                           name="arrival"
+                           id="arrival"
+                           disabled
+                           th:value="(${flight} != null ? ${flight.getAirportArrival().getName()} : '')">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="timeArrival">Time of arrival</label>
+                    <input id="timeArrival"
+                           class="form-control"
+                           name="timeArrival"
+                           type="text"
+                           disabled
+                           th:value="(${flight} != null ? ${flight.getTime_arrival} : '')">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="company">Airlines company</label>
+                    <input type="text"
+                           class="form-control"
+                           name="company"
+                           id="company"
+                           disabled
+                           th:value="(${flight} != null ? ${flight.getCompany().getName()} : '')">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="flightNumber">Flight number</label>
+                    <input type="text"
+                           class="form-control"
+                           name="flightNumber"
+                           id="flightNumber"
+                           disabled
+                           th:value="(${flight} != null ? ${flight.getFlightNumber()} : '')">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="gate">Gate</label>
+                    <input type="text"
+                           class="form-control"
+                           id="gate"
+                           name="gate"
+                           disabled
+                           th:value="(${flight} != null ? ${flight.getGate()} : '')">
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="ticketNumber">Ticket number</label>
+                    <input type="text"
+                           class="form-control"
+                           name="ticketNumber"
+                           id="ticketNumber"
+                           disabled
+                           th:value="(${session.class} != null ? ${session.class} : '')">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="seat">Seat</label>
+                    <input type="text"
+                           class="form-control"
+                           name="seat"
+                           id="seat"
+                           disabled
+                           th:value="(${session.seat} != null ? ${session.seat} : '')">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="luggage">Luggage type</label>
+                    <input type="text"
+                           class="form-control"
+                           name="luggage"
+                           id="luggage"
+                           disabled
+                           th:value="(${session.luggage} != null ? ${session.luggage} : '')">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="weight">Weight</label>
+                    <input type="text"
+                           class="form-control"
+                           name="weight"
+                           id="weight"
+                           disabled
+                           th:value="(${session.weight} != null ? ${session.weight} : '')">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="accountNumber">Account number</label>
+                    <input type="text"
+                           class="form-control"
+                           name="accountNumber"
+                           id="accountNumber"
+                           disabled
+                           th:value="(${passenger} != null ? ${passenger.getAccount_number()} : '')">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="price">Price</label>
+                    <input type="text"
+                           class="form-control"
+                           name="price"
+                           id="price"
+                           disabled
+                           th:value="(${flight} != null ? ${flight.getPrice()} : '')">
+                </div>
+            </div>
+            <form method="post" action="/ticket/confirmTicket">
+                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 15px; margin-top: 15px;">Confirm</button>
+
+            </form>
+        </div>
+    </section>
+    <section style="height: 350px"></section>
+
+
+</th:block>

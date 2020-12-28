@@ -1,0 +1,82 @@
+<style>
+    .form-control {
+        font-size: 15px;
+    }
+
+</style>
+<th:block xmlns:th="http://www.thymeleaf.org">
+    <section class="home" style="padding-top: 10%">
+        <div class="container"
+             style="width: 40%; margin: auto; background: white; font-size: 21px; padding: 70px; border-radius: 21px; box-shadow: 5px 10px 8px #888888">
+            <form action="/ticket/saveTicket" method="post">
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="luggage">Luggage type</label>
+                        <select name="luggage" id="luggage" class="form-control">
+                            <option value="Hand">Hand</option>
+                            <option value="Cabin">Cabin</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="weight">Weight</label>
+                        <input type="text" class="form-control" id="weight" name="weight" placeholder="Weight in KG">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="klasa">Class</label>
+                        <select name="klasa" id="klasa" class="form-control">
+                            <option value="Economy">Economy</option>
+                            <option value="Business">Business</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="seat">Seat</label>
+                        <input id="seat" class="form-control" name="seat" type="number" placeholder="Seat">
+
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 15px; margin-top: 15px;">Next</button>
+
+            </form>
+        </div>
+    </section>
+
+    <div class="row customers">
+        <div class="column">
+            <a href="https://www.lufthansa.com/de/de/homepage">
+                <img src="lufthansaGIF.gif" title="Lufthansa" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" style="filter: grayscale(0)">
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://wizzair.com/mk-mk">
+                <img style="padding-top: 24%;filter: grayscale(0)" src="wizzGIF.gif" title="Wizz Air" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" >
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.turkishairlines.com/">
+                <img style="padding-top: 10%;filter: grayscale(0)" src="turkishGIF.gif" title="Turkish Airlines" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" >
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.emirates.com/us/english/">
+                <img style="padding-top: 10%;filter: grayscale(0)" src="emirates.png" title="Fly Emirates" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" >
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.airserbia.com/">
+                <img style="padding-top: 10%;filter: grayscale(0)" src="airserbiaGIF.gif" title="Air Serbia" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive">
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.qantas.com/au/en.html">
+                <img src="qantasGIF.gif" title="Qantas" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" style="filter: grayscale(0)">
+            </a>
+        </div>
+    </div>
+
+
+</th:block>

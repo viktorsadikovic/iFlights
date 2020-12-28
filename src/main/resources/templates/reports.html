@@ -1,0 +1,66 @@
+<style>
+    .form-control {
+        font-size: 15px;
+    }
+
+</style>
+<th:block xmlns:th="http://www.thymeleaf.org">
+    <section class="home" style="padding-top: 10%">
+        <div class="container"
+             style="width: 60%; margin: auto; background: white; font-size: 21px; padding: 70px; border-radius: 21px; box-shadow: 5px 10px 8px #888888">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Airlines Company</th>
+                    <th scope="col">Number of flights</th>
+                    <th scope="col">Number of tickets sold</th>
+                    <th scope="col">Total amount</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="stat: ${stats}">
+                    <td th:text="${stat.getCompanyName()}"></td>
+                    <td th:text="${stat.getNumberFlights()}"></td>
+                    <td th:text="${stat.getNumberTickets()}"></td>
+                    <td th:text="${stat.getTotalAmount()}"></td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="row customers">
+        <div class="column">
+            <a href="https://www.lufthansa.com/de/de/homepage">
+                <img src="lufthansaGIF.gif" title="Lufthansa" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" style="filter: grayscale(0)">
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://wizzair.com/mk-mk">
+                <img style="padding-top: 24%;filter: grayscale(0)" src="wizzGIF.gif" title="Wizz Air" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" >
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.turkishairlines.com/">
+                <img style="padding-top: 10%;filter: grayscale(0)" src="turkishGIF.gif" title="Turkish Airlines" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" >
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.emirates.com/us/english/">
+                <img style="padding-top: 10%;filter: grayscale(0)" src="emirates.png" title="Fly Emirates" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" >
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.airserbia.com/">
+                <img style="padding-top: 10%;filter: grayscale(0)" src="airserbiaGIF.gif" title="Air Serbia" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive">
+            </a>
+        </div>
+        <div class="column">
+            <a href="https://www.qantas.com/au/en.html">
+                <img src="qantasGIF.gif" title="Qantas" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive" style="filter: grayscale(0)">
+            </a>
+        </div>
+    </div>
+
+</th:block>
